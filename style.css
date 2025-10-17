@@ -885,3 +885,59 @@ html {
     opacity: 0.95;
 }
 
+
+
+/* Details Section */
+.details-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.details-section h3 {
+    color: var(--jaipur-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.detail-card {
+    background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--jaipur-primary);
+}
+
+.detail-card h4 {
+    color: var(--jaipur-primary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.detail-card p {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.detail-card p:last-child {
+    margin-bottom: 0;
+}
+
+.booking-ref {
+    font-family: 'Courier New', monospace;
+    background: rgba(233, 30, 99, 0.1);
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    color: var(--jaipur-primary);
+    margin-top: 0.5rem !important;
+}
+
