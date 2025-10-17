@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaipur Itinerary</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <meta name="theme-color" content="#ffc107">
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+        if (
+            "serviceWorker" in navigator &&
+            (window.location.protocol === "https:" ||
+                window.location.hostname === "localhost" ||
+                window.location.hostname.startsWith("127."))
+        ) {
+            navigator.serviceWorker
+                .register("service-worker.js")
+                .then(function (registration) {
+                    console.log("Service Worker registered with scope:", registration.scope);
+                })
+                .catch(function (error) {
+                    console.error("Service Worker registration failed:", error);
+                });
+        } else {
+            console.log("Service Worker is not supported in this browser.");
+        }
+
+        fetch("itinerary.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("content").innerHTML = data;
+            });
+    </script>
+</body>
+</html>
+
