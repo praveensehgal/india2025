@@ -1,17 +1,17 @@
 :root {
-    /* Delhi - Capital Colors - Red Fort & Marigold */
-    --delhi-primary: #DC143C;
-    --delhi-secondary: #FF8C00;
-    --delhi-accent: #FFD700;
-    --delhi-light: #FFF5E6;
-    --delhi-gradient: linear-gradient(135deg, #DC143C 0%, #FF8C00 100%);
+    /* Delhi - Capital Colors - Saffron & Deep Red */
+    --delhi-primary: #FF6B35;
+    --delhi-secondary: #F7931E;
+    --delhi-accent: #FFD23F;
+    --delhi-light: #FFF8F0;
+    --delhi-gradient: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
     
-    /* Agra - Marble White & Royal Purple */
-    --agra-primary: #6B46C1;
-    --agra-secondary: #F8B4D9;
-    --agra-accent: #FFF9FB;
-    --agra-light: #FFF5F9;
-    --agra-gradient: linear-gradient(135deg, #6B46C1 0%, #F8B4D9 100%);
+    /* Agra - Marble & Moonlight */
+    --agra-primary: #8B7AB8;
+    --agra-secondary: #C9ADA7;
+    --agra-accent: #F4F1DE;
+    --agra-light: #FFF9F5;
+    --agra-gradient: linear-gradient(135deg, #8B7AB8 0%, #C9ADA7 100%);
     
     /* Jaipur - Pink City Colors */
     --jaipur-primary: #E91E63;
@@ -63,7 +63,7 @@ body {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, #DC143C 0%, #E91E63 40%, #6B46C1 70%, #00BCD4 100%);
+    background: linear-gradient(135deg, #FF6B35 0%, #E91E63 33%, #8B7AB8 66%, #00BCD4 100%);
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -114,6 +114,8 @@ body {
     align-items: center;
     gap: 0.5rem;
     min-width: 150px;
+    max-width: 150px;
+    flex-shrink: 0;
 }
 
 .region-btn:hover:not(.coming-soon) {
