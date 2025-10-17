@@ -3,38 +3,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaipur Itinerary</title>
+    <title>India 2025 - Your Journey</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="icons/icon-192x192.png">
-    <meta name="theme-color" content="#ffc107">
+    <meta name="theme-color" content="#E91E63">
+    <meta name="description" content="Your personalized India travel itinerary - Jaipur, Goa, Kashmir">
 </head>
 <body>
-    <div id="content"></div>
-    <script>
-        if (
-            "serviceWorker" in navigator &&
-            (window.location.protocol === "https:" ||
-                window.location.hostname === "localhost" ||
-                window.location.hostname.startsWith("127."))
-        ) {
-            navigator.serviceWorker
-                .register("service-worker.js")
-                .then(function (registration) {
-                    console.log("Service Worker registered with scope:", registration.scope);
-                })
-                .catch(function (error) {
-                    console.error("Service Worker registration failed:", error);
-                });
-        } else {
-            console.log("Service Worker is not supported in this browser.");
-        }
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">India 2025 🇮🇳</h1>
+            <p class="tagline">Your Journey Through Colors & Culture</p>
+        </div>
+    </header>
 
-        fetch("itinerary.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("content").innerHTML = data;
-            });
+    <!-- Region Navigation -->
+    <nav class="region-nav">
+        <div class="container">
+            <button class="region-btn active" data-region="jaipur">
+                <span class="region-icon">🏰</span>
+                <span class="region-name">Jaipur</span>
+                <span class="region-subtitle">The Pink City</span>
+            </button>
+            <button class="region-btn coming-soon" data-region="goa">
+                <span class="region-icon">🏖️</span>
+                <span class="region-name">Goa</span>
+                <span class="region-subtitle">Coming Soon</span>
+            </button>
+            <button class="region-btn coming-soon" data-region="kashmir">
+                <span class="region-icon">🏔️</span>
+                <span class="region-name">Kashmir</span>
+                <span class="region-subtitle">Coming Soon</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Jaipur Section -->
+            <section id="jaipur-section" class="region-section active">
+                <!-- Hero -->
+                <div class="hero">
+                    <div class="hero-pattern"></div>
+                    <div class="hero-content">
+                        <h2 class="hero-title">Jaipur</h2>
+                        <p class="hero-subtitle">November 22-24, 2025</p>
+                        <div class="hero-dates">
+                            <span class="date-badge">Saturday</span>
+                            <span class="date-badge">Sunday</span>
+                            <span class="date-badge">Monday</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Info -->
+                <div class="quick-info">
+                    <div class="info-card">
+                        <span class="info-icon">🌡️</span>
+                        <div>
+                            <h4>Weather</h4>
+                            <p>Pleasant, 15-28°C</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">🚗</span>
+                        <div>
+                            <h4>Transport</h4>
+                            <p>Private car recommended</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">🍛</span>
+                        <div>
+                            <h4>Cuisine</h4>
+                            <p>Rajasthani delights</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day Navigation -->
+                <div class="day-tabs">
+                    <button class="day-tab active" data-day="day1">
+                        <span class="day-number">Day 1</span>
+                        <span class="day-date">Nov 22, Sat</span>
+                    </button>
+                    <button class="day-tab" data-day="day2">
+                        <span class="day-number">Day 2</span>
+                        <span class="day-date">Nov 23, Sun</span>
+                    </button>
+                    <button class="day-tab" data-day="day3">
+                        <span class="day-number">Day 3</span>
+                        <span class="day-date">Nov 24, Mon</span>
+                    </button>
+                </div>
+
+                <!-- Day 1 Content -->
+                <div id="day1" class="day-content active">
+                    <h3 class="day-title">Forts and Sunsets</h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-time">8:00 AM - 1:00 PM</div>
+                            <div class="timeline-content">
+                                <h4>🏰 Amber Fort & Panna Meena Ka Kund</h4>
+                                <p>Start your journey at the majestic Amber Fort, a UNESCO World Heritage Site. Explore the stunning Sheesh Mahal (Palace of Mirrors) and intricate courtyards.</p>
+                                <div class="highlights">
+                                    <span class="highlight-tag">Sheesh Mahal</span>
+                                    <span class="highlight-tag">Ganesh Pol</span>
+                                    <span class="highlight-tag">2-3 hours needed</span>
+                                </div>
+                                <p class="tip">💡 <strong>Tip:</strong> Hire a guide (₹300) for rich historical insights</p>
+                                <p class="location-note">Then visit the nearby Panna Meena Ka Kund stepwell - perfect for photos!</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-time">1:00 PM - 4:00 PM</div>
+                            <div class="timeline-content">
+                                <h4>🍽️ Lunch & Jaigarh Fort</h4>
+                                <div class="restaurant-card">
+                                    <h5>Garh Rooftop Cafe</h5>
+                                    <p>Stunning views of Amber Fort while you dine</p>
+                                </div>
+                                <p>Optional: Visit Jaigarh Fort to see the world's largest cannon on wheels.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-time">4:00 PM - 7:00 PM</div>
+                            <div class="timeline-content">
+                                <h4>🌅 Sunset at Nahargarh Fort</h4>
+                                <p>Watch the sun set over the Pink City from the best vantage point. Relax at Padao Restaurant with drinks included in the ₹100 entry fee.</p>
+                                <div class="highlights">
+                                    <span class="highlight-tag">Panoramic views</span>
+                                    <span class="highlight-tag">Best sunset spot</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-time">Dinner</div>
+                            <div class="timeline-content">
+                                <h4>🍴 Dinner Recommendations</h4>
+                                <div class="restaurant-grid">
+                                    <div class="restaurant-card featured">
+                                        <h5>1135 AD</h5>
+                                        <p>Royal dining at Amber Fort complex</p>
+                                        <span class="price-tag">₹₹₹</span>
+                                    </div>
+                                    <div class="restaurant-card">
+                                        <h5>Once Upon a Time at The Bagh</h5>
+                                        <p>Beautiful garden setting</p>
+                                        <span class="price-tag">₹₹</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 Content -->
+                <div id="day2" class="day-content">
+                    <h3 class="day-title">The Pink City and its Treasures</h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-time">9:00 AM - 1:00 PM</div>
+                            <div class="timeline-content">
+                                <h4>🏛️ Hawa Mahal & City Palace</h4>
+                                <p>Start at the iconic Hawa Mahal (Palace of Winds). The museum is OPEN on Sunday, so explore inside with an audio guide (₹100).</p>
+                                <div class="alert-box">
+                                    ℹ️ Museum closed on Saturdays - but open today!
+                                </div>
+                                <p>Next, visit the magnificent City Palace with its stunning gates representing different seasons.</p>
+                                <div class="highlights">
+                                    <span class="highlight-tag">Pritam Niwas Chowk</span>
+                                    <span class="highlight-tag">Mubarak Mahal</span>
+                                    <span class="highlight-tag">Diwan-i-Khas</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-time">1:00 PM - 4:00 PM</div>
+                            <div class="timeline-content">
+                                <h4>🍝 Lunch & Jantar Mantar</h4>
+                                <div class="restaurant-card featured">
+                                    <h5>Bar Palladio</h5>
+                                    <p>Stunning blue interiors, Italian cuisine</p>
+                                    <span class="price-tag">₹₹₹</span>
+                                </div>
+                                <p>After lunch, explore Jantar Mantar - a UNESCO World Heritage astronomical observatory with the world's largest stone sundial.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-time">4:00 PM onwards</div>
+                            <div class="timeline-content">
+                                <h4>🛍️ Shopping & Leisure</h4>
+                                <p>Immerse yourself in Jaipur's vibrant bazaars:</p>
+                                <div class="shopping-list">
+                                    <div class="shop-item">
+                                        <strong>Johari Bazaar</strong> - Exquisite jewelry & gemstones
+                                    </div>
+                                    <div class="shop-item">
+                                        <strong>Bapu Bazaar</strong> - Textiles, leather goods, handicrafts
+                                    </div>
+                                </div>
+                                <p class="tip">💡 Best time: 5-9 PM when markets are most vibrant</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-time">Dinner</div>
+                            <div class="timeline-content">
+                                <h4>🎬 Evening Entertainment</h4>
+                                <div class="restaurant-card featured">
+                                    <h5>Raj Mandir Cinema</h5>
+                                    <p>Catch a Bollywood movie in this iconic, opulent cinema hall</p>
+                                </div>
+                                <div class="restaurant-grid">
+                                    <div class="restaurant-card">
+                                        <h5>Peacock Restaurant</h5>
+                                        <p>Bohemian rooftop ambiance</p>
+                                    </div>
+                                    <div class="restaurant-card">
+                                        <h5>C-Scheme Area</h5>
+                                        <p>Trendy bars & restaurants</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 3 Content -->
+                <div id="day3" class="day-content">
+                    <h3 class="day-title">Culture, Crafts, and Farewell</h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-time">9:00 AM - 1:00 PM</div>
+                            <div class="timeline-content">
+                                <h4>📸 Patrika Gate & Jal Mahal</h4>
+                                <p>Start with the Instagram-famous Patrika Gate - vibrant hand-painted columns perfect for family photos.</p>
+                                <div class="highlights">
+                                    <span class="highlight-tag">Photo opportunity</span>
+                                    <span class="highlight-tag">Modern architecture</span>
+                                </div>
+                                <p>Then visit Jal Mahal (Water Palace) - a serene palace floating on Man Sagar Lake.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-time">Afternoon</div>
+                            <div class="timeline-content">
+                                <h4>🎨 Choose Your Experience</h4>
+                                <div class="experience-grid">
+                                    <div class="experience-card">
+                                        <span class="exp-icon">👨‍🍳</span>
+                                        <h5>Cooking Class</h5>
+                                        <p>Learn Rajasthani cuisine secrets</p>
+                                    </div>
+                                    <div class="experience-card">
+                                        <span class="exp-icon">🎨</span>
+                                        <h5>Block Printing Workshop</h5>
+                                        <p>Create your own textile art</p>
+                                    </div>
+                                    <div class="experience-card">
+                                        <span class="exp-icon">☕</span>
+                                        <h5>Leisurely Brunch</h5>
+                                        <p>Curious Life Coffee Roasters or Anokhi Café</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="special-experiences">
+                        <h4>✨ Special Add-ons</h4>
+                        <div class="addon-grid">
+                            <div class="addon-card">
+                                <span class="addon-icon">🎈</span>
+                                <h5>Hot Air Balloon Ride</h5>
+                                <p>Bird's-eye view of Jaipur countryside at sunrise</p>
+                            </div>
+                            <div class="addon-card">
+                                <span class="addon-icon">🐆</span>
+                                <h5>Jhalana Leopard Safari</h5>
+                                <p>Thrilling wildlife adventure</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Restaurants Section -->
+                <div class="top-restaurants">
+                    <h3>🍽️ Top Dining Spots</h3>
+                    <div class="restaurant-showcase">
+                        <div class="restaurant-card showcase">
+                            <h5>Bar Palladio</h5>
+                            <p>Stunning peacock blue interiors, Italian cuisine</p>
+                            <span class="cuisine-tag">Italian</span>
+                            <span class="price-tag">₹₹₹</span>
+                        </div>
+                        <div class="restaurant-card showcase">
+                            <h5>1135 AD</h5>
+                            <p>Royal Rajasthani dining at Amber Fort</p>
+                            <span class="cuisine-tag">Rajasthani</span>
+                            <span class="price-tag">₹₹₹</span>
+                        </div>
+                        <div class="restaurant-card showcase">
+                            <h5>Peacock Restaurant</h5>
+                            <p>Bohemian rooftop with eclectic menu</p>
+                            <span class="cuisine-tag">Multi-cuisine</span>
+                            <span class="price-tag">₹₹</span>
+                        </div>
+                        <div class="restaurant-card showcase">
+                            <h5>Curious Life Coffee Roasters</h5>
+                            <p>Best coffee in Jaipur, great brunch</p>
+                            <span class="cuisine-tag">Cafe</span>
+                            <span class="price-tag">₹₹</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Goa Section (Coming Soon) -->
+            <section id="goa-section" class="region-section">
+                <div class="coming-soon-content">
+                    <span class="coming-soon-icon">🏖️</span>
+                    <h2>Goa</h2>
+                    <p>Beach paradise coming soon...</p>
+                </div>
+            </section>
+
+            <!-- Kashmir Section (Coming Soon) -->
+            <section id="kashmir-section" class="region-section">
+                <div class="coming-soon-content">
+                    <span class="coming-soon-icon">🏔️</span>
+                    <h2>Kashmir</h2>
+                    <p>Mountain paradise coming soon...</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>India 2025 - Your Personalized Journey</p>
+            <p class="footer-note">Made with ❤️ for an unforgettable adventure</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(reg => console.log('Service Worker registered'))
+                .catch(err => console.log('Service Worker registration failed'));
+        }
     </script>
 </body>
 </html>

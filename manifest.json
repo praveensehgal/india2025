@@ -1,51 +1,77 @@
 {
-    "name": "Jaipur Itinerary",
-    "short_name": "Jaipur",
+    "name": "India 2025 - Your Journey",
+    "short_name": "India 2025",
+    "description": "Your personalized travel itinerary for Jaipur, Goa, and Kashmir",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#ffc107",
+    "background_color": "#FAFAFA",
+    "theme_color": "#E91E63",
     "orientation": "portrait-primary",
+    "categories": ["travel", "lifestyle"],
     "icons": [
         {
             "src": "icons/icon-72x72.png",
             "type": "image/png",
-            "sizes": "72x72"
+            "sizes": "72x72",
+            "purpose": "any"
         },
         {
             "src": "icons/icon-96x96.png",
             "type": "image/png",
-            "sizes": "96x96"
+            "sizes": "96x96",
+            "purpose": "any"
         },
         {
             "src": "icons/icon-128x128.png",
             "type": "image/png",
-            "sizes": "128x128"
+            "sizes": "128x128",
+            "purpose": "any"
         },
         {
             "src": "icons/icon-144x144.png",
             "type": "image/png",
-            "sizes": "144x144"
+            "sizes": "144x144",
+            "purpose": "any"
         },
         {
             "src": "icons/icon-152x152.png",
             "type": "image/png",
-            "sizes": "152x152"
+            "sizes": "152x152",
+            "purpose": "any"
         },
         {
             "src": "icons/icon-192x192.png",
             "type": "image/png",
-            "sizes": "192x192"
+            "sizes": "192x192",
+            "purpose": "any maskable"
         },
         {
             "src": "icons/icon-384x384.png",
             "type": "image/png",
-            "sizes": "384x384"
+            "sizes": "384x384",
+            "purpose": "any"
         },
         {
             "src": "icons/icon-512x512.png",
             "type": "image/png",
-            "sizes": "512x512"
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [],
+    "shortcuts": [
+        {
+            "name": "Jaipur Itinerary",
+            "short_name": "Jaipur",
+            "description": "View your Jaipur travel plans",
+            "url": "/?region=jaipur",
+            "icons": [
+                {
+                    "src": "icons/icon-192x192.png",
+                    "sizes": "192x192"
+                }
+            ]
         }
     ]
 }
+
