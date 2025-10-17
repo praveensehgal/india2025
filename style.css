@@ -1,35 +1,45 @@
 :root {
-    /* Delhi - Capital Colors - Saffron & Deep Red */
-    --delhi-primary: #FF6B35;
-    --delhi-secondary: #F7931E;
-    --delhi-accent: #FFD23F;
-    --delhi-light: #FFF8F0;
-    --delhi-gradient: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    /* Modern Color Palette */
+    --blurple: #5433FF;
+    --bright-blue: #4379FF;
+    --cyan-blue: #1CC6FF;
+    --mint-green: #97FBD1;
+    --pink: #F6A4EC;
     
-    /* Agra - Marble & Moonlight */
-    --agra-primary: #8B7AB8;
-    --agra-secondary: #C9ADA7;
-    --agra-accent: #F4F1DE;
-    --agra-light: #FFF9F5;
-    --agra-gradient: linear-gradient(135deg, #8B7AB8 0%, #C9ADA7 100%);
+    /* Delhi - Blurple & Bright Blue */
+    --delhi-primary: #5433FF;
+    --delhi-secondary: #4379FF;
+    --delhi-accent: #97FBD1;
+    --delhi-light: #F0EDFF;
+    --delhi-gradient: linear-gradient(135deg, #5433FF 0%, #4379FF 100%);
     
-    /* Jaipur - Pink City Colors */
-    --jaipur-primary: #E91E63;
-    --jaipur-secondary: #FF6F00;
-    --jaipur-accent: #FFD700;
-    --jaipur-terracotta: #D84315;
-    --jaipur-light: #FCE4EC;
-    --jaipur-gradient: linear-gradient(135deg, #E91E63 0%, #FF6F00 100%);
+    /* Agra - Bright Blue & Cyan */
+    --agra-primary: #4379FF;
+    --agra-secondary: #1CC6FF;
+    --agra-accent: #97FBD1;
+    --agra-light: #EBF4FF;
+    --agra-gradient: linear-gradient(135deg, #4379FF 0%, #1CC6FF 100%);
     
-    /* Goa - Beach Colors (for future) */
-    --goa-primary: #00BCD4;
-    --goa-secondary: #FF7043;
-    --goa-gradient: linear-gradient(135deg, #00BCD4 0%, #FF7043 100%);
+    /* Jaipur - Pink & Blurple */
+    --jaipur-primary: #F6A4EC;
+    --jaipur-secondary: #5433FF;
+    --jaipur-accent: #97FBD1;
+    --jaipur-light: #FFF0FD;
+    --jaipur-gradient: linear-gradient(135deg, #F6A4EC 0%, #5433FF 100%);
     
-    /* Kashmir - Mountain Colors (for future) */
-    --kashmir-primary: #1976D2;
-    --kashmir-secondary: #4CAF50;
-    --kashmir-gradient: linear-gradient(135deg, #1976D2 0%, #4CAF50 100%);
+    /* Goa - Cyan Blue & Mint Green */
+    --goa-primary: #1CC6FF;
+    --goa-secondary: #97FBD1;
+    --goa-accent: #F6A4EC;
+    --goa-light: #E6FBFF;
+    --goa-gradient: linear-gradient(135deg, #1CC6FF 0%, #97FBD1 100%);
+    
+    /* Kashmir - Bright Blue & Mint Green */
+    --kashmir-primary: #4379FF;
+    --kashmir-secondary: #97FBD1;
+    --kashmir-accent: #1CC6FF;
+    --kashmir-light: #EBF4FF;
+    --kashmir-gradient: linear-gradient(135deg, #4379FF 0%, #97FBD1 100%);
     
     /* Neutral Colors */
     --text-dark: #212121;
@@ -63,7 +73,7 @@ body {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, #FF6B35 0%, #E91E63 33%, #8B7AB8 66%, #00BCD4 100%);
+    background: linear-gradient(135deg, #5433FF 0%, #4379FF 25%, #1CC6FF 50%, #97FBD1 75%, #F6A4EC 100%);
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -1017,5 +1027,114 @@ html {
 .wedding-event.highlight .event-note {
     color: white;
     opacity: 0.9;
+}
+
+
+
+/* Activities Section */
+.activities-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.activities-section h3 {
+    color: var(--blurple);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.activity-card {
+    background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-top: 4px solid var(--blurple);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.activity-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.activity-card h4 {
+    color: var(--blurple);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.activity-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-card li {
+    padding: 0.5rem 0;
+    color: var(--text-dark);
+    border-bottom: 1px solid #E9ECEF;
+    font-size: 0.95rem;
+}
+
+.activity-card li:last-child {
+    border-bottom: none;
+}
+
+.activity-card li:before {
+    content: "✓ ";
+    color: var(--mint-green);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* Birthday Special */
+.birthday-special {
+    background: linear-gradient(135deg, #FFF0FD 0%, #F0EDFF 100%);
+    border-left: 6px solid var(--pink);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.birthday-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(246, 164, 236, 0.2);
+}
+
+.birthday-card h5 {
+    color: var(--pink);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.birthday-card p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.birthday-card .tip {
+    background: linear-gradient(135deg, #F0EDFF 0%, #FFF0FD 100%);
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-top: 1rem;
 }
 
