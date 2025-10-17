@@ -1,17 +1,17 @@
 :root {
-    /* Delhi - Capital Colors */
-    --delhi-primary: #8B4513;
-    --delhi-secondary: #DAA520;
-    --delhi-accent: #CD853F;
-    --delhi-light: #FFF8DC;
-    --delhi-gradient: linear-gradient(135deg, #8B4513 0%, #DAA520 100%);
+    /* Delhi - Capital Colors - Red Fort & Marigold */
+    --delhi-primary: #DC143C;
+    --delhi-secondary: #FF8C00;
+    --delhi-accent: #FFD700;
+    --delhi-light: #FFF5E6;
+    --delhi-gradient: linear-gradient(135deg, #DC143C 0%, #FF8C00 100%);
     
-    /* Agra - Marble White & Mughal Colors */
-    --agra-primary: #4A5568;
-    --agra-secondary: #E8B4B8;
-    --agra-accent: #F7FAFC;
-    --agra-light: #FFF5F7;
-    --agra-gradient: linear-gradient(135deg, #4A5568 0%, #E8B4B8 100%);
+    /* Agra - Marble White & Royal Purple */
+    --agra-primary: #6B46C1;
+    --agra-secondary: #F8B4D9;
+    --agra-accent: #FFF9FB;
+    --agra-light: #FFF5F9;
+    --agra-gradient: linear-gradient(135deg, #6B46C1 0%, #F8B4D9 100%);
     
     /* Jaipur - Pink City Colors */
     --jaipur-primary: #E91E63;
@@ -63,7 +63,7 @@ body {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, #8B4513 0%, #E91E63 50%, #00BCD4 100%);
+    background: linear-gradient(135deg, #DC143C 0%, #E91E63 40%, #6B46C1 70%, #00BCD4 100%);
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -116,7 +116,7 @@ body {
     min-width: 150px;
 }
 
-.region-btn:hover {
+.region-btn:hover:not(.coming-soon) {
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
 }
@@ -124,6 +124,22 @@ body {
 .region-btn.active {
     background: var(--jaipur-gradient);
     color: white;
+    border-color: var(--jaipur-primary);
+    transform: none;
+}
+
+.region-btn.active[data-region="delhi"] {
+    background: var(--delhi-gradient);
+    border-color: var(--delhi-primary);
+}
+
+.region-btn.active[data-region="agra"] {
+    background: var(--agra-gradient);
+    border-color: var(--agra-primary);
+}
+
+.region-btn.active[data-region="jaipur"] {
+    background: var(--jaipur-gradient);
     border-color: var(--jaipur-primary);
 }
 
@@ -839,5 +855,19 @@ html {
 .coming-soon-box p {
     color: #1565C0;
     font-size: 1.1rem;
+}
+
+
+
+/* Region dates styling */
+.region-dates {
+    font-size: 0.75rem;
+    opacity: 0.85;
+    font-weight: 400;
+    margin-top: 0.25rem;
+}
+
+.region-btn.active .region-dates {
+    opacity: 0.95;
 }
 
