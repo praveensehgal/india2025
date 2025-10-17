@@ -1,4 +1,18 @@
 :root {
+    /* Delhi - Capital Colors */
+    --delhi-primary: #8B4513;
+    --delhi-secondary: #DAA520;
+    --delhi-accent: #CD853F;
+    --delhi-light: #FFF8DC;
+    --delhi-gradient: linear-gradient(135deg, #8B4513 0%, #DAA520 100%);
+    
+    /* Agra - Marble White & Mughal Colors */
+    --agra-primary: #4A5568;
+    --agra-secondary: #E8B4B8;
+    --agra-accent: #F7FAFC;
+    --agra-light: #FFF5F7;
+    --agra-gradient: linear-gradient(135deg, #4A5568 0%, #E8B4B8 100%);
+    
     /* Jaipur - Pink City Colors */
     --jaipur-primary: #E91E63;
     --jaipur-secondary: #FF6F00;
@@ -49,7 +63,7 @@ body {
 
 /* Header */
 .header {
-    background: var(--jaipur-gradient);
+    background: linear-gradient(135deg, #8B4513 0%, #E91E63 50%, #00BCD4 100%);
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -160,6 +174,21 @@ body {
 /* Hero Section */
 .hero {
     background: var(--jaipur-gradient);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+
+.hero-delhi {
+    background: var(--delhi-gradient);
+}
+
+.hero-agra {
+    background: var(--agra-gradient);
     border-radius: 20px;
     padding: 3rem 2rem;
     margin-bottom: 2rem;
@@ -697,5 +726,118 @@ html {
 ::selection {
     background: var(--jaipur-primary);
     color: white;
+}
+
+
+
+/* Trip Dates in Header */
+.trip-dates {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+}
+
+/* Section Overview */
+.section-overview {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.section-overview h3 {
+    color: var(--jaipur-primary);
+    margin-bottom: 1rem;
+}
+
+.section-overview p {
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+/* Highlights Section */
+.highlights-section {
+    margin: 2rem 0;
+}
+
+.highlights-section h3 {
+    color: var(--jaipur-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.highlight-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.highlight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--jaipur-primary);
+}
+
+.highlight-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.highlight-card h4 {
+    color: var(--jaipur-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.highlight-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Experiences Section */
+.experiences-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+    border-radius: 16px;
+}
+
+.experiences-section h3 {
+    color: var(--jaipur-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Coming Soon Box */
+.coming-soon-box {
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    margin: 2rem 0;
+    border: 2px dashed #2196F3;
+}
+
+.coming-soon-box h3 {
+    color: #1976D2;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.coming-soon-box p {
+    color: #1565C0;
+    font-size: 1.1rem;
 }
 
