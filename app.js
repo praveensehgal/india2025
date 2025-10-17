@@ -4,10 +4,6 @@ const regionSections = document.querySelectorAll('.region-section');
 
 regionBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        // Don't allow clicking on coming soon regions
-        if (btn.classList.contains('coming-soon')) {
-            return;
-        }
         
         const region = btn.dataset.region;
         

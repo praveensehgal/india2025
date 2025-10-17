@@ -148,6 +148,16 @@ body {
     cursor: not-allowed;
 }
 
+.region-btn.active[data-region="goa"] {
+    background: var(--goa-gradient);
+    border-color: var(--goa-primary);
+}
+
+.region-btn.active[data-region="kashmir"] {
+    background: var(--kashmir-gradient);
+    border-color: var(--kashmir-primary);
+}
+
 .region-icon {
     font-size: 2rem;
 }
@@ -205,10 +215,14 @@ body {
 
 .hero-agra {
     background: var(--agra-gradient);
-    border-radius: 20px;
-    padding: 3rem 2rem;
-    margin-bottom: 2rem;
-    position: relative;
+}
+
+.hero-goa {
+    background: var(--goa-gradient);
+}
+
+.hero-kashmir {
+    background: var(--kashmir-gradient);
     overflow: hidden;
     color: white;
     text-align: center;
