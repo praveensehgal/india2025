@@ -941,3 +941,81 @@ html {
     margin-top: 0.5rem !important;
 }
 
+
+
+/* Wedding Section */
+.wedding-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #FFF5F7 0%, #FFE8F0 100%);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    border: 2px solid #E91E63;
+}
+
+.wedding-section h3 {
+    color: var(--jaipur-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.wedding-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.wedding-event {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--jaipur-primary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wedding-event:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.wedding-event.highlight {
+    background: linear-gradient(135deg, #E91E63 0%, #F06292 100%);
+    color: white;
+    border-left: 4px solid #AD1457;
+}
+
+.event-date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--jaipur-primary);
+    margin-bottom: 0.5rem;
+}
+
+.wedding-event.highlight .event-date {
+    color: white;
+    opacity: 0.95;
+}
+
+.event-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.wedding-event.highlight .event-name {
+    color: white;
+}
+
+.event-note {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.wedding-event.highlight .event-note {
+    color: white;
+    opacity: 0.9;
+}
+
